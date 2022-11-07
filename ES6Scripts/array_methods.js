@@ -32,3 +32,4 @@ onlyItemNames.forEach(displayElements);
 console.log(`Total price of cart: $${sum}.`);
 
 
+
