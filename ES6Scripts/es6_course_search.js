@@ -39,8 +39,7 @@ let courses = [
 
 //the parameter is for the element that find() is currently testing
 function find_StartDate(element){
-    let property = element.CourseId;
-    if(property === "PROG200"){
+    if(element.CourseId === "PROG200"){
         return true;
     }
     // don't need the return false but I think it's good practice to
@@ -79,6 +78,7 @@ let titlesOver50 = courses.filter(find_over50);
 let titles50Length = titlesOver50.length;
 let classroom1 = courses.filter(find_coursesInC1);
 
+//display the startDate
 console.log(startDate.StartDate);
 console.log(titleCourse.Title);
 
