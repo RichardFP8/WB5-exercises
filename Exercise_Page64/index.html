@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="stylesheet" href="imageGroup.css"/>
-        <title>Test</title>
-        <script>
-            "use strict";
-            window.onload = function () {
-                const allDivs = document.getElementsByClassName("imageGroup");
-                Array.from(allDivs).forEach( function (div) { div.style.border = "5px solid red";})
-               
-                const imgWithoutAlt = document.querySelectorAll("img:not([alt=''])");
-                const test = document.getElementById("test");
-                imgWithoutAlt.alt = "Nature taking a breather";
-                test.innerHTML = imgWithoutAlt.alt;
 
-               
-            }
-        </script>
-    </head>
-    <body>
-        <div class="imageGroup">
-            <img src="./images/Boat.jpg" alt="Boat just swmiming on by">
-            <p >Hello</p>
-        </div>
-        <div class="imageGroup">
-            <img src="./images/grass.jpg">
-            <p >Bonjour</p>
-        </div>
-        <div class="imageGroup">
-            <img src="./images/tree.jpg" alt="">
-            <p id="test">Konnichiwa</p>
-        </div>
-    </body>
+<head>
+    <link rel="stylesheet" href="imageGroup.css" />
+    <title>Test</title>
+    <script>
+        "use strict";
+        window.onload = () => {
+            const allDivs = document.getElementsByClassName("imageGroup");
+            Array.from(allDivs).forEach((div) => div.style.border = "5px solid red");
+
+            /*from how I understood it, if has text -> leave it alone, if it doesn't -> change it; 
+             using not() meant that I had to say the <img> that DOES NOT have ANY text(== empty text) for alt; how do you specify that with a computer;
+             how do you specify that the <img> that HAS an alt attribute AND the alt DOES NOT have ANY text. ANY text; double not() -> doesn't work, invalid syntax? */
+
+            let imgWithoutAlt = document.querySelector("img[alt='']");
+
+            /*    Array.from(imgsWithoutAlt).forEach( (img) => img.style.display = "none");
+                imgWithoutAlt.style.display = "none";   */
+            imgsWithoutAlt.alt = "graffity image, for some reason";
+
+        }
+    </script>
+</head>
+
+<body>
+    <div class="imageGroup">
+        <img src="./images/Boat.jpg" alt="Boat just swmiming on by">
+        <p>Hello</p>
+    </div>
+    <div class="imageGroup">
+        <img src="./images/grass.jpg">
+        <p>Bonjour</p>
+    </div>
+    <div class="imageGroup">
+        <img src="./images/tree.jpg" alt="">
+        <p id="test">Konnichiwa</p>
+    </div>
+</body>
+
 </html>
