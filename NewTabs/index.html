@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <script>
+        "use strict";
+        window.onload = function () {
+            const googleBtn = document.getElementById("toGoogle");
+            const w3scholsBtn = document.getElementById("toW3Schools");
+            const ImagesPageBtn = document.getElementById("toImagesPage");
+
+            //I didn't assign an event handler but used functions for all three 
+            //used the arrow function and works
+            googleBtn.onclick = () => window.open("https://www.google.com/");
+            //used anonymous function and works
+            w3scholsBtn.onclick = function () { window.open("https://www.w3schools.com/js/") };
+            //use "_self" to open another page in the same tab; works
+            ImagesPageBtn.onclick = function () { window.open("images.html", "_self") };
+        }
+
+    </script>
+</head>
+
+<body>
+    <header style="width: 50%; margin: 0 auto;">
+        <h1 style="margin: 1em; text-align: center">Main page</h1>
+    </header>
+    <main style="margin-top: 1.5rem; display: flex; justify-content: space-evenly">
+        <input id="toGoogle" type="button" value="Click me" />
+        <input id="toW3Schools" type="button" value="No me" />
+        <input id="toImagesPage" type="button" value="I'M THE ONE" />
+    </main>
+</body>
+
+</html>

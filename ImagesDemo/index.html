@@ -7,11 +7,11 @@
     <body>
         <main>
             <div>
-                <img src="./images/Canoe.jpg" alt="Canoe just vibing"/>
+                <img id="canoe" src="" alt="Canoe just vibing"/>
                 <p>A canoe passing on by near some trees</p>
             </div>
             <div>
-                <img src="./images/HorseAndSnow.jpg" alt="Horse ready to take on the mountain"/>
+                <img id="horse" src="" alt="Horse ready to take on the mountain"/>
                 <p>The mighty horse. Majestic beast. Looks to the horizon</p>
             </div>
         </main>
@@ -25,6 +25,10 @@
                     p.style.textAlign = "center";
                     p.style.padding = "0.5em"
                 });
+                const imgCanoe = document.getElementById("canoe");
+                const imgHorse = document.getElementById("horse");
+                imgCanoe.src = "./images/Canoe.jpg";
+                imgHorse.src = "./images/HorseAndSnow.jpg";
 
                 const collectImages = document.getElementsByTagName("img");
                 Array.from(collectImages).forEach(img => img.classList.add("roundedImg"));

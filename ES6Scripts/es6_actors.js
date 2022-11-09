@@ -33,7 +33,7 @@ let atLeastThreeFilms = academyMembers.filter(actors => {
     if (actors.films.length >= 3) { return true; }
 });
 let findBob = academyMembers.find(actor => {
-    if (actor.name.substring(0, 3) === "Bob") { return true; }
+    if (actor.name.substring(0, 4) === "Bob ") { return true; }
     else { return false; }
 });
 let findFilmWithA = academyMembers.filter(actor => {
@@ -47,14 +47,3 @@ atLeastThreeFilms.forEach(element => console.log(element.name));
 console.log(findBob.name);
 findFilmWithA.forEach(element => {console.log(element.name)});
 
-/*
-This also worked too:
-let atLeastThreeFilms = academyMembers.filter(actors => actors.films.length >= 3);
-
-This one doesn't work:
-let findFilmWithA = academyMembers.filter(actor => {
-    actor.films.forEach(element = > {
-        if(element.charAt(0) === "A"){ return true; }
-    });
-}); 
-*/
