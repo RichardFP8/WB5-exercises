@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Images</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Choose from this variety</legend>
+            <select id="listOfImages" name="ImageChoices">
+                <option value="" disabled selected>Select one</option>
+            </select>
+            <div id="flexbox">
+                <button id="addImage" name="addImage">Show image!</button>
+                <input id="clearAll" type="button" value="CLEAR" />
+            </div>
+        </fieldset>
+    </form>
+    <div id="showImages">
+
+    </div>
+    <script src="./scripts/index.js"></script>
+</body>
+
+</html>

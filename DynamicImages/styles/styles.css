@@ -1,0 +1,23 @@
+form{
+    width: 50%;
+    margin: 0 auto;
+}
+#listOfImages{
+    display: block;
+    margin: 1em;
+}
+#flexbox{
+    display: flex;
+    justify-content: space-evenly;
+}
+img{
+    width: 200px;
+    height: 300px;
+}
+#showImages{
+    display: flex;
+    margin: 1em;
+    flex-flow: row wrap;
+    row-gap: 1em;
+    column-gap: 1em;
+}
