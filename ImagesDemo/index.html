@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="roundedImg.css"/>
+        <title>Images Demo</title>
+    </head>
+    <body>
+        <main>
+            <div>
+                <img src="./images/Canoe.jpg" alt="Canoe just vibing"/>
+                <p>A canoe passing on by near some trees</p>
+            </div>
+            <div>
+                <img src="./images/HorseAndSnow.jpg" alt="Horse ready to take on the mountain"/>
+                <p>The mighty horse. Majestic beast. Looks to the horizon</p>
+            </div>
+        </main>
+
+        <script>
+            "use strict";
+            window.onload = () => {
+                const collectParas = document.getElementsByTagName("p");
+                Array.from(collectParas).forEach(p => {
+                    p.style.border = "0.1rem solid #000";
+                    p.style.textAlign = "center";
+                    p.style.padding = "0.5em"
+                });
+
+                const collectImages = document.getElementsByTagName("img");
+                Array.from(collectImages).forEach(img => img.classList.add("roundedImg"));
+
+                const getAllDivs = document.getElementsByTagName("div");
+                Array.from(getAllDivs).forEach(div => {
+                    div.style.width  = "50%";
+                    div.style.margin = "0 auto";
+                });
+
+                
+            }
+        </script>
+    </body>
+</html>
