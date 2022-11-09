@@ -4,6 +4,24 @@
 <head>
     <link rel="stylesheet" href="imageGroup.css" />
     <title>Test</title>
+</head>
+
+<body>
+    <main>
+        <div class="imageGroup">
+            <img src="./images/Boat.jpg" alt="Boat just swmiming on by">
+            <p>Hello</p>
+        </div>
+        <div class="imageGroup">
+            <img src="./images/grass.jpg">
+            <p>Bonjour</p>
+        </div>
+        <div class="imageGroup">
+            <img src="./images/tree.jpg" alt="">
+            <p id="test">Konnichiwa</p>
+        </div>
+    </main>
+
     <script>
         "use strict";
         window.onload = () => {
@@ -14,29 +32,14 @@
              using not() meant that I had to say the <img> that DOES NOT have ANY text(== empty text) for alt; how do you specify that with a computer;
              how do you specify that the <img> that HAS an alt attribute AND the alt DOES NOT have ANY text. ANY text; double not() -> doesn't work, invalid syntax? */
 
-            let imgWithoutAlt = document.querySelector("img[alt='']");
+            let imgWithoutAlt = document.querySelector("img:not([alt])");
+            imgWithoutAlt.alt = "graffity image, for some reason";
 
-            /*    Array.from(imgsWithoutAlt).forEach( (img) => img.style.display = "none");
-                imgWithoutAlt.style.display = "none";   */
-            imgsWithoutAlt.alt = "graffity image, for some reason";
-
+            /*  TESTS:
+              Array.from(imgsWithoutAlt).forEach( (img) => img.style.display = "none");
+              imgWithoutAlt.style.display = "none";   */
         }
     </script>
-</head>
-
-<body>
-    <div class="imageGroup">
-        <img src="./images/Boat.jpg" alt="Boat just swmiming on by">
-        <p>Hello</p>
-    </div>
-    <div class="imageGroup">
-        <img src="./images/grass.jpg">
-        <p>Bonjour</p>
-    </div>
-    <div class="imageGroup">
-        <img src="./images/tree.jpg" alt="">
-        <p id="test">Konnichiwa</p>
-    </div>
 </body>
 
 </html>
