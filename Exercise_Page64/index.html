@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="imageGroup.css"/>
+        <title>Test</title>
+        <script>
+            "use strict";
+            window.onload = function () {
+                const allDivs = document.getElementsByClassName("imageGroup");
+                Array.from(allDivs).forEach( function (div) { div.style.border = "5px solid red";})
+               
+                const imgWithoutAlt = document.querySelectorAll("img:not([alt=''])");
+                const test = document.getElementById("test");
+                imgWithoutAlt.alt = "Nature taking a breather";
+                test.innerHTML = imgWithoutAlt.alt;
+
+               
+            }
+        </script>
+    </head>
+    <body>
+        <div class="imageGroup">
+            <img src="./images/Boat.jpg" alt="Boat just swmiming on by">
+            <p >Hello</p>
+        </div>
+        <div class="imageGroup">
+            <img src="./images/grass.jpg">
+            <p >Bonjour</p>
+        </div>
+        <div class="imageGroup">
+            <img src="./images/tree.jpg" alt="">
+            <p id="test">Konnichiwa</p>
+        </div>
+    </body>
+</html>
